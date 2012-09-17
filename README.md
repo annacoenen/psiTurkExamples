@@ -1,6 +1,5 @@
 
-These are examples of behavioral experiments that are usually run on Amazon's Mechanical Turk using psiTurk.
-
+These are examples of behavioral experiments that are meant to be run on Amazon's Mechanical Turk using psiTurk.
 
 Quick Start
 -----------
