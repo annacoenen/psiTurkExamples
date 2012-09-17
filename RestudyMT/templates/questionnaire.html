@@ -1,0 +1,154 @@
+
+<div id="questionnaire">
+    <h1>Task Complete</h1>
+    <p>Congratulations, you're done!.</p>
+
+    <p>You remembered the correct target for <span id=ncorrect></span> out of <span id=nstimuli></span> items, 
+    and will be receiving a bonus of $<span id=bonus></span>.
+
+
+    <p>You will be eligible for payment and the bonus after you answer the following questions.</p>
+
+    <table>
+        <tr class="question">
+            <td class="questiontext">
+            On a scale of 1-10 (where 10 is the most engaged), please rate how <b>ENGAGING</b> you found this task:
+            </td>
+            <td>
+            <select id="engagement" name="engagement">
+                <option value="10">10 - Very engaging</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5" SELECTED>5 - Moderately</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+                <option value="0">0 - Not engaged</option>
+            </select>
+            </td>
+        </tr>
+        <tr class="question">
+            <td class="questiontext">
+            On a scale of 1-10 (where 10 is the most difficult), please rate how <b>DIFFICULT</b> you found this task:
+            </td>
+            <td>
+            <select id="difficulty" name="difficulty">
+                <option value="10">10 - Very difficult</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5" SELECTED>5 - Moderately difficult</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+                <option value="0">0 - Easy</option>
+            </select>
+            </td>
+        </tr>
+
+        <tr class="question">
+            <td class="questiontext">
+            Did you have any particular strategies for memorizing the pairs of objects? If so, please give a brief description.
+            </td>
+            <td><textarea id="strategy1" cols=50 rows=3 /></textarea></td>
+        </tr>
+
+ 
+        <tr class="question">
+            <td class="questiontext">
+            Did you find that some of the TARGETS (the four repeating images on the right) were easier than others to form associations with? If so, which ones?
+            </td>
+            <td><textarea id="strategy2" cols=50 rows=3 /></textarea></td>
+        </tr>
+
+         <tr class="question">
+            <td class="questiontext">
+            Did you have any particular strategies for deciding whether to restudy a pair? If so, please give a brief description.
+            </td>
+            <td><textarea id="strategy3" cols=50 rows=3 /></textarea></td>
+        </tr>
+
+ 
+         <tr class="question">
+             <td class="questiontext">
+            One way to make the restudy decision is to judge how familiar the CUE feels (whether you remember seeing it during the initial study phase). Alternatively, you could try to retrieve the TARGET that goes with the CUE to judge whether you remember the association. How much did you rely on these two strategies?
+            </td>
+            <td>
+                <select id="restudystrategy" name="restudystrategy">
+                    <option value="noresp" SELECTED></option>
+                    <option value="morefamiliarity">I relied on the familiarity of the CUE more often</option>
+                    <option value="moreretrieval">I relied on trying to retrieve the TARGET more often</option>
+                    <option value="equal">I used both strategies equally often</option>
+                    <option value="other">Neither, I used a different strategy</option>
+                </select>
+            </td>
+        </tr>
+
+       
+
+
+        <tr class="question">
+            <td class="questiontext">
+            Did you use pencil, paper, or take notes on your computer in order perform the task?<br>
+            <em>(Please respond honestly so we can analyze your data appropriately.  This will not effect your payment or bonus)</em>
+            </td>
+            <td>
+            <select id="physicalaids" name="physicalaids">
+                <option value="no" SELECTED>No, include my data in the main analysis.</option>
+                <option value="yes">Yes, I used a memory aid.  Analyze my data separately.</option>
+            </select>
+            </td>
+        </tr>
+
+        <tr class="question">
+            <td class="questiontext">
+                Do you have any other thoughts or suggestions about the task?
+            </td>
+            <td><textarea id="howtoimprove" cols=50 rows=3 /></textarea></td>
+        </tr>
+
+        <tr class="question">
+            <td class="questiontext">
+            What gender do you identify with?
+            </td>
+            <td><select id="gender" name="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="noresponse" SELECT>I'd prefer not to respond</option>
+            </select></td>
+        </tr>
+        <tr class="question">
+            <td class="questiontext">
+            How old are you in years? Enter '-1' if you would prefer not to respond.
+            </td>
+            <td><input id="age" name="age" type="number" min="-1" style="font-family:Arial; font-size:18px;height:30px; width:80px" /></td>
+        </tr>
+        <tr class="question">
+            <td class="questiontext">
+            How would you describe your level of educational attainment?
+            </td>
+            <td><select id="education" name="education">
+                <option value="somehs">Some high school (or less)</option>
+                <option value="highschool">High School diploma / GED / equivalent</option>
+                <option value="somecollege">Some college / 2-year degree</option>
+                <option value="bachelors">Bachelor's degree</option>
+                <option value="somegrad">Some graduate school</option>
+                <option value="masters">Master's degree</option>
+                <option value="doctor">Doctoral degree</option>
+                <option value="noresponse">I'd prefer not to respond</option>
+            </select></td>
+        </tr>
+
+
+
+    </table>
+
+    <form id="postquiz" action="debrief" method="post">
+        <input type="button" class="continue" id="continue" value="Continue"></input>
+    </form>
+</div>

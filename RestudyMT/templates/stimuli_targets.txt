@@ -1,0 +1,4 @@
+static/images/stimuli/repeating/eagle.jpg
+static/images/stimuli/repeating/jacket.jpg
+static/images/stimuli/repeating/scissors.jpg
+static/images/stimuli/repeating/wagon.jpg

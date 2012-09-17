@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MEM</title>
+    <script type="text/javascript" src="static/json2.js"></script>
+    <script type="text/javascript" src="static/jquery-min.js"></script>
+    <script type="text/javascript" src="static/util.js"></script>    
+    <script type="text/javascript" src="static/task.js"></script>    
+    <link href="static/styles.css" rel="stylesheet" type="text/css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="static/jquery-ui-1.8.18.custom.min.js"></script>
+   
+    <script language="JavaScript">
+    <!-- Hide the script from old browsers --
+    
+    // Subject info, including condition and counterbalance codes.
+    var subjid = {{ subj_num }};
+    /*********************
+    * Get things started *
+    ********************/
+    
+    function assignpagegen(page){ return function(){ pages[pagename] = page; } }
+    $(window).load( function(){
+
+            setoutputprefix([{{ subj_num }}]);
+
+            runfun = function() { exp.begin(); }; 
+            
+            // Preload images listed in templates/instuctionimg.txt
+            $.ajax( {
+                url:"instructionimg.txt",
+                success: function(data) {
+                    $.each(data.split('\n'), function() {
+                        INSTRUCTIONIMG.push( imagepreload(String(this)) );
+                    });
+
+                },
+                async: false });
+
+            // Preload images 
+            $.ajax( {
+                url:STIMULI_FILE,
+                success: function(data) {
+                    $.each(data.split('\n'), function() {
+                        STIMULI.push( imagepreload(String(this)) );
+                    });
+                },
+                async: false });
+
+            // Preload paired targets
+            $.ajax( {
+                url:TARGETS_FILE,
+                success: function(data) {
+                    $.each(data.split('\n'), function() {
+                        TARGETS.push( imagepreload(String(this)) );
+                    });
+                },
+                async: false });
+
+            $.ajax( {
+                url:"pages.txt",
+                success: function(data) {
+                    $.each(data.split('\n'), function() { PAGENAMES.push( this );});
+                },
+                async: false 
+            });
+
+            // Load resources then run the exp
+            $.ajaxSetup({cache: false});
+            for (i=0; i<PAGENAMES.length; i++) {
+                    var pn = PAGENAMES[i];
+                    $.ajax({ 
+                            url: pn,
+                            success: function(pn){ return function(page){ PAGES[pn] = page; } }(pn),
+                            async: false
+                    });
+                }
+
+            $.ajax( {
+                    url:"instructions-0.html",
+                    success: function(page) { runfun() },
+                    async: false } );
+    });
+    //-->
+    </script>
+    
+
+
+</head>
+<body>
+    
+    <noscript>
+            <h1>Warning: Javascript seems to be disabled</h1>
+            <p>This website requires that Javascript be enabled on your browser.</p>
+            <p>Instructions for enabling Javascript in your browser can be found <a
+                    href="http://support.google.com/bin/answer.py?hl=en&answer=23852">here</a><p>
+    </noscript>
+
+</body>
+</html>

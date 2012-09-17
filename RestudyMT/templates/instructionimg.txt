@@ -1,0 +1,5 @@
+static/images/example_pair.png
+static/images/example_freqdecision.png
+static/images/example_restudy_decision.png
+static/images/example_test.png
+static/images/targets.png

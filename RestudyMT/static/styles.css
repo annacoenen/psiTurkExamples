@@ -1,0 +1,227 @@
+#main {
+    text-align:center;
+    /*border:1px solid green;*/
+}
+
+div#stimulus {
+    padding-top:100px;
+    width:705px;
+    margin: 0 auto;
+    text-align:center;
+}   
+
+div#stimulus img {
+    width:300px;
+}
+
+div#stimulus div#cue {
+    width:300px;
+    float:left;
+}
+
+div#stimulus div#fix {
+    width:100px;
+    margin-top:110px;
+    font-size:4em;
+    font-weight:bold;
+    float:left;
+}
+
+div#stimulus div#target {
+    width:300px;
+    float:left;
+}
+
+
+div#stimulus-decision {
+    padding-top:70px;
+    width:535px;
+    margin:0 auto;
+    text-align:center;
+}
+div#stimulus-decision img {
+    width:300px;
+}
+
+div#prompt {
+    font-family:Arial;
+    visibility:hidden;
+    color:black;
+    font-size:2em;
+}
+
+div#response {
+    width:570px;
+    margin-top:50px;
+}
+
+#slider {
+    float:left;
+    width:300px;
+}
+
+.label {
+    padding-left:10px;
+    padding-right:10px;
+    float:left;
+    color:black;
+    font-family:Helvetica;
+    font-weight:bold;
+}
+
+.ui-slider-handle {
+    visibility:hidden;
+}
+
+
+
+ol {
+    font-family:Arial;
+    font-size:1.1em;    
+    padding-left:0px;
+    margin-left:0px;
+}
+
+li {
+    margin-left:30px;
+}
+
+
+div#stimulus-test {
+    visibility:hidden;
+    padding-top:70px;
+    width:750px;
+    margin:0 auto;
+    text-align:center;
+}
+div#stimulus-test div#cue img {
+    width:300px;
+}
+
+table#targets {
+    margin-top:30px;
+    border-spacing:10px;
+}
+
+div#stimulus-test td.target img {
+    width:180px;
+    border:1px solid gray;
+}
+
+
+input {
+    font-size:1.2em;
+    font-family:Myriad Pro;
+    font-weight:bold;
+    margin:0 auto;
+    width:120px;
+    height:60px;
+    display:block;
+}
+
+div#instruct {
+    margin:0 auto;
+    width:700px;
+    padding:50px;
+    color:black;
+    font-family:Myriad Pro;
+    text-align:left;
+}
+
+div#instruct h1 {
+    text-align:center;
+    margin-bottom:0px;
+    padding:0px;
+    color:#3399FF;
+    /*border:1px solid green;*/
+}
+div#instruct h2 {
+    text-align:center;
+    margin-top:0px;
+    padding:0px;
+    /*border:1px solid red;*/
+}
+div#instruct p {
+    font-family:Arial;
+    font-size:1.1em;
+}
+
+
+div.continueinstructions {
+    margin-top:100px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+div.instruct div.img {
+    border:1px solid gray;
+    text-align:center;
+}   
+
+
+
+
+
+div#questionnaire {
+    color:black;
+    font-family:Arial;
+    margin:0 auto;
+    width:800px;
+}
+
+div#questionnaire h1 {
+    color:red;
+    text-align:center;
+}
+
+div#questionnaire table {
+    border-spacing: 15px;
+    border-collapse: collapse;
+    text-align:left;
+}
+
+div#questionnaire tr {
+    border:2px solid gray;
+}
+
+div#questionnaire td {
+    padding:10px;
+}
+
+
+
+#postquiz {
+    margin-top:20px;
+}
+
+#debriefing {
+    margin:0 auto;
+    width:700px;
+    padding:50px;
+    font-family:Myriad Pro;
+
+}
+
+#debriefing h1 {
+    color:black;
+}
+
+#debriefing a {
+    color:black;
+}
+
+#debriefing table {
+    margin:0 auto;
+}
+
+#debriefing td {
+    width:200px;
+    height:100px;
+    border:2px solid gray;
+    font-size:1.1em;
+    margin:20px;
+    padding:10px;
+    float:left;
+
+}
+
